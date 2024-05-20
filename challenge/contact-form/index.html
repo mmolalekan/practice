@@ -12,48 +12,108 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
+    .container {
+      background-color: hsl(148, 38%, 91%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
+
+    .container form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      width: 600px;
+      height: 600px;
+      border-radius: 15px;
+      flex-wrap: wrap;
+      text-align: center;
+      padding: 20px
+    }
+
+    form>h1 {
+      font-size: 20px;
+      text-align: left;
+      width: 500px;
+      line-height: 5px;
+    }
+
+    form .names {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      width: max-content;
+    }
+
+    .firstname {
+      display: flex;
+      flex-direction: column;
+      padding-right: 10px;
+      width: 250px;
+    }
+
+    .lastname {
+      display: flex;
+      flex-direction: column;
+      padding-left: 10px;
+      width: 250px;
+    }
+
+    label {
+      text-align: left;
+      padding-bottom: 5px;
+    }
+
+    input {
+      height: 40px;
+      border-radius: 10px;
+      border-color: grey;
+          }
+    
   </style>
 </head>
 
 <body>
-  <div>
-    <h1>Contact Us</h1>
-    <label for="firstName">First Name</label>
-    <input type="text" id="firstName" required>
-    <label for="lastName">Last name</label>
-    <input type="text" id="firstName" required>
-    <br>
-    <label for="email">Email Address</label>
-    <input type="email" id="email" required>
-    <br>
-    <p>Query type</p>
-    <input type="radio" id="enquiry" name="query" value="General Enquiry">
-    <label for="enquiry">General Enquiry</label>
-    <input type="radio" id="request" name="query" value="Support Request">
-    <label for="request">Support Request</label>
+  <div class="container">
+    <form class="card" action="">
+      <h1>Contact Us</h1>
+      <div class="names">
+        <div class="firstname">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" required>
+        </div>
+        <div class="lastname">
+          <label for="lastName">Last name</label>
+          <input type="text" id="firstName" required>
+        </div>
+      </div>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" required>
+      <div class="query">
+        <p>Query type</p>
+        <input type="radio" id="enquiry" name="query" value="General Enquiry">
+        <label for="enquiry">General Enquiry</label>
+        <input type="radio" id="request" name="query" value="Support Request">
+        <label for="request">Support Request</label>
+      </div>
 
-    <br>
-    <label for="message">Message</label>
-    <br>
-    <textarea name="message" id="message" cols="30" rows="10"></textarea>
-    <br>
-    <br>
+      <label for="message">Message</label>
+      <textarea name="message" id="message" cols="30" rows="10"></textarea>
 
-    <input type="checkbox" id="consent">
-    <label for="consent">I consent to being contacted by the team</label>
-    <br>
-    <br>
-    <button>Submit</button>
+      <input type="checkbox" id="consent">
+      <label for="consent">I consent to being contacted by the team</label>
 
-
+      <button>Submit</button>
+    </form>
   </div>
 </body>
 
